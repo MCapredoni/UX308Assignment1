@@ -4,7 +4,7 @@ describe("Tests all stages of an order", function() {
     it("test hello", function() {
         const oOrder = new Order("999-999-9999");
         const aResults = oOrder.handleInput("hello");
-        expect(aResults[0]).toBe("Hello! Thanks for using food fast!")
+        expect(aResults[0]).toBe("Hello! Thanks for ordering Marcs Italian!")
     });
     it("test yes", function() {
         const oOrder = new Order("999-999-9999");
