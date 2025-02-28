@@ -8,15 +8,15 @@ describe("Tests all stages of an order", function() {
     });
     it("test thin crust", function() {
         const oOrder = new Order("999-999-9999");
-        oOrder.handleInput("hello")
-        const aResults = oOrder.handleInput("yes");
-        expect(aResults[0]).toBe("Your rapid test is reserved under the phone number 999-999-9999")
+        oOrder.handleInput("thin")
+        const aResults = oOrder.handleInput("thin");
+        expect(aResults[0]).toBe(`Thin Crust it is! Would you like your pizza a small or large?`)
     });
-    it("test no", function() {
+    it("test small", function() {
         const oOrder = new Order("999-999-9999");
-        oOrder.handleInput("hello")
-        const aResults = oOrder.handleInput("no");
-        expect(aResults[0]).toBe("Thanks anyway for trying our dinner service reservation system")
+        oOrder.handleInput("small")
+        const aResults = oOrder.handleInput("small");
+        expect(aResults[0]).toBe(`Small pizza it is`)
     });
   });
   

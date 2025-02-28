@@ -10,16 +10,31 @@ export class Order {
         },
         RESERVING: (sInput) => {
           let aReturn = [];
-          this.isDone = true;
-          if (sInput.toLowerCase().startsWith('t')) {
+          this.stateCur = this.OrderState.SIZE;
+          if (sInput.toLowerCase().startsWith('thin')) {
             aReturn.push(`Thin Crust it is! Would you like your pizza a small or large?`);
             aReturn.push(`Your order number is ${this.sFrom}`);
-          } else {
-            aReturn.push("Thanks anyway for trying our dinner service reservation system");
-            aReturn.push("Maybe next time")
           }
           return aReturn;
-        }
+        },
+        SIZE: (sInput) => {
+          let aReturn = [];
+          this.stateCur = this.OrderState.TOPPINGS;
+          if (sInput.toLowerCase().startsWith('small')) {
+            aReturn.push(`Small pizza it is`);
+            aReturn.push(`Would you like any toppings? We have a special section tonight of sausage or mushrooms`);
+          }
+          return aReturn;
+        },
+        TOPPINGS: (sInput) => {
+          let aReturn = [];
+          this.stateCur = this.OrderState.TOPPINGS;
+          if (sInput.toLowerCase().startsWith('sausage')) {
+            aReturn.push(`Sausage it is`);
+            aReturn.push(`Would you like any toppings? We have a special section tonight of sausage or mushrooms`);
+          }
+          return aReturn;
+        },
         
       };
   
