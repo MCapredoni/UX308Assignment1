@@ -5,7 +5,7 @@ export class Order {
           let aReturn = [];
           this.stateCur = this.OrderState.RESERVING;
           aReturn.push("Hello! Thanks for ordering Marcs Italian!");
-          aReturn.push("Tonights menu is Pizza! We have 2 options this evening Pizza or Pasta. Please respond with the option you prefer.");
+          aReturn.push("Tonights menu this evening Pizza or Pasta! Please respond with the option you prefer.");
           return aReturn;
         },
         RESERVING: (sInput) => {
