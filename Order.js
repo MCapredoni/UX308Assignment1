@@ -32,6 +32,7 @@ export class Order {
             aReturn.push(`Large order it is!`);
             aReturn.push(`What type of sauce would you like on your order? Tonight we have the usual "Tomato Sauce" or "Alfredo Sauce".`);
           } 
+          return aReturn;
         },
         SAUCE: (sInput) => {
           let aReturn = [];
@@ -51,11 +52,11 @@ export class Order {
           this.isDone = true;
           if (sInput.toLowerCase().startsWith('coke')) {
             aReturn.push(`Coke it is!`);
-            aReturn.push(`Thanks! Order: ${this.sFrom} will be ready in 30 minutes for pickup.`);
+            aReturn.push(`Thanks for ordering at Marcs Italian! Order: ${this.sFrom} will be ready in 30 minutes for pickup.`);
           } else {
             (sInput.toLowerCase().startsWith('pepsi'))
             aReturn.push(`pepsi it is!`);
-            aReturn.push(`Thanks! Order: ${this.sFrom} will be ready in 30 minutes for pickup.`);
+            aReturn.push(`Thanks for ordering at Marcs Italian! Order: ${this.sFrom} will be ready in 30 minutes for pickup.`);
           }
           return aReturn;
         },
