@@ -19,6 +19,12 @@ describe("Tests all stages of an order", function() {
         expect(aResults[0]).toBe(`Pasta it is! Would you like a small serving or large serving? Please reply with either "large" or "small"`)
     });
     
+    it("test pepsi", function() {
+        const oOrder = new Order("999-999-9999");
+        oOrder.handleInput("pepsi")
+        const aResults = oOrder.handleInput("pepsi");
+        expect(aResults[0]).toBe("pepsi it is!")
+    });
   });
   
   
