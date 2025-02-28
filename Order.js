@@ -12,16 +12,15 @@ export class Order {
           let aReturn = [];
           this.isDone = true;
           if (sInput.toLowerCase().startsWith('t')) {
-            aReturn.push(`Thin Crust it is! TEMPTEMPTEMPTEMPTEMP ${this.sFrom}`);
-            let d = new Date();
-            d.setMinutes(d.getMinutes() + 120);
-            aReturn.push(`Please pick it up at 123 Tidy St., Acton before ${d.toTimeString()}`);
+            aReturn.push(`Thin Crust it is! Would you like your pizza a small or large?`);
+            aReturn.push(`Your order number is ${this.sFrom}`);
           } else {
-            aReturn.push("Thanks for trying our reservation system");
+            aReturn.push("Thanks anyway for trying our dinner service reservation system");
             aReturn.push("Maybe next time")
           }
           return aReturn;
         }
+        
       };
   
       this.stateCur = this.OrderState.WELCOMING;

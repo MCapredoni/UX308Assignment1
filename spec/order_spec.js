@@ -6,7 +6,7 @@ describe("Tests all stages of an order", function() {
         const aResults = oOrder.handleInput("hello");
         expect(aResults[0]).toBe("Hello! Thanks for ordering Marcs Italian!")
     });
-    it("test yes", function() {
+    it("test thin crust", function() {
         const oOrder = new Order("999-999-9999");
         oOrder.handleInput("hello")
         const aResults = oOrder.handleInput("yes");
@@ -16,7 +16,7 @@ describe("Tests all stages of an order", function() {
         const oOrder = new Order("999-999-9999");
         oOrder.handleInput("hello")
         const aResults = oOrder.handleInput("no");
-        expect(aResults[0]).toBe("Thanks for trying our reservation system")
+        expect(aResults[0]).toBe("Thanks anyway for trying our dinner service reservation system")
     });
   });
   

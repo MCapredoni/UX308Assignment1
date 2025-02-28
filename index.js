@@ -3,7 +3,7 @@ import { Order } from "./Order.js"
 class Chat extends HTMLElement {
   constructor(){
     super();
-    this.oOrder = new Order("123-456-7891");
+    this.oOrder = new Order("41603");
   }
   sendMessage(evt) {
     evt.preventDefault();
